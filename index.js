@@ -17,10 +17,10 @@ module.exports = function(src) {
       var cmds = []
       for (var i = 0; i < params.length; i++) {
         var p = params[i]
-        cmds.push(i && i < params.length-1 ? 'tee >('+p+' >&2)' : p+(i ? ' >&2' : ''))
+        cmds.push(i && i < params.length-1 ? 'tee >('+p+' >&3)' : p+(i ? ' >&3' : ''))
       }
 
-      return '('+cmds.join(' | ')+') 2>&1\n'
+      return '('+cmds.join(' | ')+') 3>&1\n'
 
       case 'reduce':
       return '('+params.slice(1).join(' & ')+') | '+params[0]+'\n'
