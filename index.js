@@ -65,5 +65,5 @@ module.exports = function(src) {
   }
 
   var output = tree.map(visit).join('')
-  return '#!/bin/bash\n'+fns.join('')+'\n'+output+'\n'+backgrounds.join('')
+  return '#!/bin/bash\nexport PATH=node_modules/.bin:$PATH'+fns.join('')+'\n'+output+'\n'+backgrounds.join('')
 }
