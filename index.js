@@ -20,10 +20,10 @@ module.exports = function(src) {
         cmds.push(i && i < params.length-1 ? 'tee >('+p+' >&2)' : p+(i ? ' >&2' : ''))
       }
 
-      return '('+cmds.join(' | ')+') 2>&1'
+      return '('+cmds.join(' | ')+') 2>&1\n'
 
       case 'reduce':
-      return params.join('\n')+'\n'
+      return '('+params.slice(1).join(' & ')+') | '+params[0]+'\n'
 
       case 'run':
       return params.join('\n')+'\n'
