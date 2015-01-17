@@ -1,0 +1,23 @@
+{
+  "name": "datscript.sh",
+  "version": "0.0.0",
+  "description": "Compile datscript to bash",
+  "main": "index.js",
+  "dependencies": {
+    "hackfile": "^3.0.1"
+  },
+  "devDependencies": {},
+  "bin": {
+    "datscript.sh": "./bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/datscript.sh.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/datscript.sh/issues"
+  },
+  "homepage": "https://github.com/mafintosh/datscript.sh"
+}
