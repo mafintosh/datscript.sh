@@ -1,6 +1,6 @@
 {
   "name": "datscript.sh",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Compile datscript to bash",
   "main": "index.js",
   "dependencies": {
