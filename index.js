@@ -30,7 +30,7 @@ module.exports = function(src) {
       var pids = []
       for (var i = 0; i < params.length; i++) {
         var p = params[i]
-        var pid = 'GASKET_PID'+(tick++)
+        var pid = 'DATSCRIPT_PID'+(tick++)
         pids.push(pid)
         str += p+' &\n'+pid+'=$!\n'
       }
@@ -44,7 +44,7 @@ module.exports = function(src) {
       var pids = []
       for (var i = 0; i < params.length; i++) {
         var p = params[i]
-        var pid = 'GASKET_PID'+(tick++)
+        var pid = 'DATSCRIPT_PID'+(tick++)
         pids.push(pid)
         str += p+' &\n'+pid+'=$!\n'
       }
