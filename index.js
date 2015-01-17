@@ -14,7 +14,13 @@ module.exports = function(src) {
 
     switch (cmd) {
       case 'map':
-      return params.join('\n')+'\n'
+      var cmds = []
+      for (var i = 0; i < params.length; i++) {
+        var p = params[i]
+        cmds.push(i && i < params.length-1 ? 'tee >('+p+' >&2)' : p+(i ? ' >&2' : ''))
+      }
+
+      return '('+cmds.join(' | ')+') 2>&1'
 
       case 'reduce':
       return params.join('\n')+'\n'
