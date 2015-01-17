@@ -25,7 +25,7 @@ console.log(bash)
 
 ```
 npm install -g datscript.sh
-datscript.sh test.ds | sh
+datscript.sh test.ds | bash
 ```
 
 Running the above will convert the datscript test.sh to bash and execute it
